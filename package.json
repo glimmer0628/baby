@@ -1,0 +1,25 @@
+{
+  "name": "xiaoer",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ahfarmer/webpack-hmr-starter-dev-server-cli.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ahfarmer/webpack-hmr-starter-dev-server-cli/issues"
+  },
+  "homepage": "https://github.com/ahfarmer/webpack-hmr-starter-dev-server-cli#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-connect": "^5.0.0",
+    "gulp-eslint": "^3.0.1"
+  }
+}

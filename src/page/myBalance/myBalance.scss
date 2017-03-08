@@ -1,0 +1,47 @@
+body, html{
+  color: #323232;
+  height: 100%;
+}
+.main{
+  height: 100%;
+  background-color: #ebebeb;
+  .navContent{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+    height: 188px;
+    font-family: "PingFang-SC-Medium";
+    color: #fff;
+    background: url('_background2.png') left top no-repeat;
+    background-size: 100% 100%;
+    .balance{
+      margin-bottom: 20px;
+      font-size: 28px;
+    }
+    .text{
+      font-size: 17px;
+    }
+  }
+  .optionContant{
+    li{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 12px;
+      height: 44px;
+      background-color: #fff;
+      .icon_arrow{
+        display: inline-block;
+        width: 9px;
+        height: 15px;
+        background: url('25.png') left top no-repeat;
+        background-size: 100% 100%;
+      }
+      .text{
+        font-family: "PingFang-SC-Regular";
+      }
+    }
+  }
+}

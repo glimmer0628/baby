@@ -1,0 +1,89 @@
+/*我的预约*/
+
+body{
+	background: #ebebeb;
+	height: 100%;
+	
+}
+.container{
+	width: 6.4rem;
+	height: 100%;
+	margin: auto;
+	
+}
+/*头部*/
+.order_top{
+	width: 100%;
+	height: 0.8rem;
+	background: #FFFFFF;
+	line-height: 0.8rem;
+}
+.order_top ul{
+	display: flex;
+	justify-content: space-around;
+	font-size: 14px;
+	color: #323232;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	
+}
+.order_top ul li:nth-of-type(1){
+	color: #F27C7C;
+}
+/*内容*/
+.order_contant{
+	width: 100%;
+	height: auto;
+}
+.order{
+	width: 100%;
+	height: 2.52rem;
+	background: #FFFFFF;
+	margin-top: 10px;
+	color: #666666;
+}
+.order>div{
+	width: 100%;
+	padding: 0 12px;
+	box-sizing: border-box;
+}
+.orderTop{
+	height: 0.9rem;
+	
+	line-height: 0.9rem;
+	background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100%' height='100%'><line x1='0%' y1='100%' x2='100%' y2='100%' style='stroke:#dfdfdf;stroke-width:1' /></svg>");
+ 	background-repeat: no-repeat;
+}
+.order_number{
+	color: #666666;
+	font-family: "PingFang-SC-Medium";
+	float: left;
+	font-size: 15px;
+}
+.btn_del,.btn_com{
+	width: 0.96rem;
+	height: 0.44rem;
+	border-radius: 4px;
+	color: #FFFFFF;
+	background: #F27C7C;
+	font-size: 12px;
+	float: right;
+	border: 0;
+	margin-top: 12px;
+	outline: none;
+}
+.orderBottom{
+	height: 1.6rem;
+	font-size: 14px;
+	
+	clear: both;
+	
+}
+
+.orderBottom>div{
+	margin-top: 15px;
+}
+.orderBottom>div:nth-of-type(1){
+	margin-top: 23px;
+}

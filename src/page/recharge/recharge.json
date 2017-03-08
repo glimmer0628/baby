@@ -1,0 +1,13 @@
+{
+  "balance": "374",
+  "topUp": [
+    {
+      "chargeCount": "1000",
+      "discount": "100"
+    },
+    {
+      "chargeCount": "1800",
+      "discount": "180"
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+  <title>支付</title>
+  <link rel="stylesheet" href="../common/normalize.css">
+  <link rel="stylesheet" href="../common/border-1px.css">
+  <link rel="stylesheet" href="pay.css">
+  <script src="../../static/zepto.js"></script>
+  <script src="pay.js"></script>
+</head>
+<body>
+  <div class="wrapper">
+    <div class="title">
+      <span class="left">您的订单金额</span>
+      <span class="right"></span>
+    </div>
+    <ul>
+      <li class="pay border-1px">
+        <span class="left">
+          <i class="balance"></i>
+          <span class="text">余额支付</span>
+        </span>
+        <span class="right default"></span>
+      </li>
+      <li class="pay border-1px">
+        <span class="left">
+          <i class="balance wechatPay"></i>
+          <span class="text">微信支付</span>
+        </span>
+        <span class="right"></span>
+      </li>
+    </ul>
+    <a class="submitBtn">确认支付</a>
+  </div>
+</body>
+</html>

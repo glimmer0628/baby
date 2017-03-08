@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+  <title>预约结算</title>
+  <link rel="stylesheet" href="../common/normalize.css">
+  <link rel="stylesheet" href="../common/border-1px.css">
+  <link rel="stylesheet" href="../../static/DateSelector.css">
+  <link rel="stylesheet" href="account.css">
+  <script src="../../static/zepto.js"></script>
+  <script src="../../static/DateSelector.js"></script>
+  <script src="account.js"></script>
+</head>
+<body>
+  <ul class="optionWrapper">
+    <li class="itemWrapper">
+      <ul class="babyWrapper">
+        <li>
+          <span class="title">宝宝姓名:</span>
+          <span class="babyName"></span>
+        </li>
+        <li>
+          <span class="title">宝宝性别:</span>
+          <span class="babySex"></span>
+        </li>
+        <li>
+          <span class="title">出生年月:</span>
+          <span class="babyBirth"></span>
+        </li>
+      </ul>
+      <span class="tip">请点击添加宝宝信息</span>
+      <i class="icon_arrow"></i>
+    </li>
+    <li class="itemWrapper">
+      <div class="posWrapper">
+        <i class="icon_pos"></i>
+        <div class="posContainer">
+          <div class="tel"></div>
+          <div class="address"></div>
+        </div>
+      </div>
+      <span class="tip">请点击添加地址信息</span>
+      <i class="icon_arrow"></i>
+    </li>
+    <li class="itemWrapper">
+      <span class="title">上门时间</span>
+      <div class="timeContainer">
+        <span class="time"></span>
+        <span class="time"></span>
+        <div id="timePicker"></div> 
+      </div>
+    </li>
+  </ul>
+  <div class="bottomFixed">
+    <div class="left">
+      <span class="total">总额:</span>
+      <span class="count"></span>
+    </div>
+    <a href="../pay/pay.html" class="right">提交订单</a>
+  </div>
+  <div id="selectDate"></div>
+</body>
+</html>

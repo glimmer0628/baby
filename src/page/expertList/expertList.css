@@ -1,0 +1,50 @@
+body, html {
+  width: 100%;
+  height: 100%;
+  color: #000; }
+
+ul {
+  width: 100%;
+  height: 100%; }
+  ul .item {
+    display: -ms-flexbox;
+    display: flex;
+    padding: 12px 12px 0 12px;
+    width: 100%;
+    height: 87px;
+    box-sizing: border-box; }
+    ul .item .avatar {
+      margin-right: 15px;
+      width: 46px;
+      height: 46px;
+      border-radius: 50%; }
+    ul .item .detail {
+      margin-top: 4px;
+      width: 100%;
+      font-size: 0; }
+      ul .item .detail .basicInfo {
+        margin-bottom: 10px; }
+        ul .item .detail .basicInfo .name {
+          font-size: 15px;
+          margin-right: 10px; }
+        ul .item .detail .basicInfo .position {
+          font-size: 12px; }
+      ul .item .detail .stars {
+        margin-bottom: 8px; }
+        ul .item .detail .stars .star {
+          display: inline-block;
+          margin-right: 5px;
+          width: 14px;
+          height: 13px;
+          background: url("star3.png") left top no-repeat;
+          background-size: cover; }
+          ul .item .detail .stars .star.no-star {
+            background-image: url("star2.png"); }
+          ul .item .detail .stars .star:last-child {
+            margin: 0; }
+      ul .item .detail .summary {
+        font-size: 12px;
+        color: #999;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap; }

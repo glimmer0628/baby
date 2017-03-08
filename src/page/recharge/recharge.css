@@ -1,0 +1,88 @@
+html, body {
+  height: 100%; }
+
+.main {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  height: 100%;
+  font-size: 12px;
+  color: #323232; }
+  .main .myRecharge {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    padding: 0 12px;
+    height: 54px; }
+    .main .myRecharge .balTitle {
+      font-size: 15px; }
+    .main .myRecharge .banlance {
+      font-size: 20px;
+      color: #eb3737; }
+  .main .chargeWrapper {
+    -ms-flex: 1;
+    flex: 1;
+    padding: 0 12px;
+    background-color: #EBEBEB; }
+    .main .chargeWrapper .chooseCount {
+      padding: 19px 0 14px 0;
+      font-size: 14px; }
+    .main .chargeWrapper .chooseSum {
+      display: -ms-flexbox;
+      display: flex;
+      margin-bottom: 28px; }
+      .main .chargeWrapper .chooseSum .sumContainer {
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -ms-flex-align: center;
+        align-items: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        margin-left: 15px;
+        width: 88px;
+        height: 45px;
+        background-color: #fff;
+        border-radius: 8px; }
+        .main .chargeWrapper .chooseSum .sumContainer:first-child {
+          margin: 0; }
+        .main .chargeWrapper .chooseSum .sumContainer.active {
+          background-color: #f27c7c;
+          color: #fff; }
+        .main .chargeWrapper .chooseSum .sumContainer .sum {
+          font-size: 14px; }
+        .main .chargeWrapper .chooseSum .sumContainer .discount {
+          margin-top: 4px;
+          font-size: 11px;
+          color: #999; }
+          .main .chargeWrapper .chooseSum .sumContainer .discount.active {
+            color: #fff; }
+    .main .chargeWrapper .pay {
+      font-size: 15px; }
+      .main .chargeWrapper .pay .money {
+        font-size: 19px;
+        color: #f27c7c; }
+    .main .chargeWrapper .payNow {
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-pack: center;
+      justify-content: center;
+      -ms-flex-align: center;
+      align-items: center;
+      margin-top: 10px;
+      height: 44px;
+      font-size: 15px;
+      color: #fff;
+      background-color: #f27c7c; }
+    .main .chargeWrapper .tips {
+      color: #999; }
+      .main .chargeWrapper .tips p {
+        margin: 0; }
+        .main .chargeWrapper .tips p:first-child {
+          margin-top: 14px;
+          margin-bottom: 10px; }

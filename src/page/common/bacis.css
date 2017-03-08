@@ -1,0 +1,56 @@
+html{
+	height: 100%;
+}
+body{
+	padding: 0;
+	margin: 0;
+	/*font-size: 0.14rem;*/
+	font-family: Helvetica Neue,Helvetica,STHeiTi,sans-serif;
+	/*兼容安卓,兼容苹果设备,黑体,所有字体不存在,系统默认字体*/
+}
+*{
+	box-sizing: border-box;
+}
+ul,li,h1,h2,h3,h4,h5,h6,p,ol,dl,dd,dt,form{
+	padding: 0;
+	margin: 0;
+}
+li{
+	list-style: none;
+}
+a{
+	text-decoration: none;
+	color: #000000;
+}
+
+@media screen and (max-width: 321px){
+	body{
+		font-size: 12px;
+	}
+	
+}
+@media screen and (min-width: 322px) and (max-width: 400px){
+	body{
+		font-size: 12px;
+	}
+	
+}
+@media screen and (min-width: 400px){
+	body{
+		font-size: 12px;
+	}
+	
+}
+
+ header{
+		width: 6.4rem;
+		height: 40px;
+		background-color: #8BC34A;
+		
+		color: #ffffff;
+		font-size: 18px;
+		line-height: 40px;
+		text-align: center;
+		position: fixed;
+		top: 0;
+	}

@@ -1,0 +1,45 @@
+body, html{
+  color: #323232;
+  height: 100%;
+}
+.wrapper{
+  height: 100%;
+  background-color: #ebebeb;
+  .avatarContent{
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    padding: 0 12px;
+    height: 79px;
+    background-color: #fff;
+    .avatar{
+      margin-right: 20px;
+      border-radius: 50%;
+    }
+  }
+  .parentInfo{
+    margin-bottom: 10px;
+    width: 100%;
+    &>li{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 14px 12px;
+      font-size: 14px;
+      background-color: #fff;
+      .detailContent{
+        display: flex;
+        align-items: center;
+        color: #999;
+        .icon_arrow{
+          display: inline-block;
+          margin-left: 15px;
+          width: 9px;
+          height: 17px;
+          background: url('25.png') left top no-repeat;
+          background-size: 100% 100%;
+        }
+      }
+    }
+  }
+}

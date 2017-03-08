@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+  <title>宝宝信息修改</title>
+  <link rel="stylesheet" href="../common/normalize.css">
+  <link rel="stylesheet" href="../common/border-1px.css">
+  <link rel="stylesheet" href="../../static/DateSelector.css">
+  <link rel="stylesheet" href="babyInfo.css">
+  <script src="../../static/zepto.js"></script>
+  <script src="../../static/DateSelector.js"></script>
+  <script src="./babyInfo.js"></script>
+</head>
+<body>
+  <div class="wrapper">
+    <ul class="itemContent">
+      <li class="border-1px">
+        <span class="title">宝宝姓名</span>
+        <input class="inputName" type="text" placeholder="请输入姓名">
+      </li>
+      <li class="border-1px">
+        <span class="title">宝宝性别</span>
+        <span class="sex">男</span>
+      </li>
+      <li class="border-1px">
+        <span class="title">出生年月</span>
+        <div class="timeContainer">
+          <span class="time"></span>
+          <div id="timePicker"></div> 
+        </div>
+      </li>
+    </ul>
+    <a href="#" class="submitBtn">保存</a>
+  </div>
+  <div id="selectDate"></div>
+</body>
+</html>

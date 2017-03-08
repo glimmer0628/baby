@@ -1,0 +1,27 @@
+body, html {
+  height: 100%;
+  color: #323232; }
+
+.wrapper {
+  height: 100%;
+  padding-left: 12px; }
+  .wrapper > li {
+    display: -ms-flexbox;
+    display: flex;
+    padding: 12px 0; }
+    .wrapper > li img {
+      margin-right: 20px; }
+    .wrapper > li .abstract {
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-pack: center;
+      justify-content: center;
+      -ms-flex-direction: column;
+      flex-direction: column; }
+      .wrapper > li .abstract .title {
+        margin: 0 0 32px 0;
+        font-size: 17px;
+        font-weight: normal; }
+      .wrapper > li .abstract .time {
+        font-size: 11px;
+        color: #adadad; }

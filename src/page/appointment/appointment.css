@@ -1,0 +1,103 @@
+html, body {
+  height: 100%; }
+
+.appointWrapper {
+  position: absolute;
+  top: 0;
+  bottom: 49px;
+  width: 100%;
+  color: #323232; }
+  .appointWrapper .appointContent {
+    -ms-flex-direction: column;
+    flex-direction: column;
+    padding: 0 12px;
+    height: 100%; }
+    .appointWrapper .appointContent .header {
+      display: -ms-flexbox;
+      display: flex;
+      height: 128px; }
+      .appointWrapper .appointContent .header img {
+        margin-top: 12px;
+        border: 1px solid #E6E6E6; }
+      .appointWrapper .appointContent .header .headerDetail {
+        margin-top: 25px;
+        margin-left: 14px; }
+        .appointWrapper .appointContent .header .headerDetail .price {
+          margin-bottom: 10px;
+          font-size: 18px;
+          color: #eb3737; }
+        .appointWrapper .appointContent .header .headerDetail .project {
+          font-size: 14px;
+          display: inline-block;
+          margin-bottom: 10px; }
+    .appointWrapper .appointContent .infoWrapper {
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      -ms-flex-pack: center;
+      justify-content: center;
+      padding: 15px 0; }
+      .appointWrapper .appointContent .infoWrapper:last-child {
+        -ms-flex: 1;
+        flex: 1; }
+      .appointWrapper .appointContent .infoWrapper .title {
+        margin-bottom: 15px;
+        font-size: 14px; }
+      .appointWrapper .appointContent .infoWrapper .chooseContent {
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap; }
+        .appointWrapper .appointContent .infoWrapper .chooseContent .sumContainer {
+          display: -ms-flexbox;
+          display: flex;
+          -ms-flex-direction: column;
+          flex-direction: column;
+          -ms-flex-align: center;
+          align-items: center;
+          -ms-flex-pack: center;
+          justify-content: center;
+          margin-left: 15px;
+          padding: 10px 14px;
+          background-color: #F5F5F5;
+          border-radius: 8px; }
+          .appointWrapper .appointContent .infoWrapper .chooseContent .sumContainer:first-child {
+            margin: 0; }
+          .appointWrapper .appointContent .infoWrapper .chooseContent .sumContainer.active {
+            background-color: #f27c7c;
+            color: #fff; }
+          .appointWrapper .appointContent .infoWrapper .chooseContent .sumContainer .sum {
+            font-size: 12px; }
+      .appointWrapper .appointContent .infoWrapper .wrapper {
+        overflow: hidden; }
+      .appointWrapper .appointContent .infoWrapper .introduce {
+      	line-height: 22px;
+        margin: 0;
+        font-size: 13px;
+        color: #808080; }
+      .appointWrapper .appointContent .infoWrapper .tip {
+        margin-bottom: 25px;
+        height: 30px;
+        font-size: 13px; }
+
+.bottomBtn {
+  position: fixed;
+  bottom: 0;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%; }
+  .bottomBtn span {
+    -ms-flex: 1;
+    flex: 1;
+    height: 49px;
+    line-height: 49px;
+    font-size: 15px;
+    text-align: center;
+    text-decoration: none;
+    color: #fff; }
+  .bottomBtn .dateBtn {
+    height: 49px;
+    background-color: #f29f5b; }
+  .bottomBtn .confirmBtn {
+    background-color: #f27c7c; }

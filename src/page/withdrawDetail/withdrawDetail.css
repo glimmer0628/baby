@@ -1,0 +1,66 @@
+body, html {
+  height: 100%;
+  color: #323232; }
+
+.wrapper {
+  height: 100%;
+  background-color: #ebebeb; }
+  .wrapper .titleWrapper {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    margin-bottom: 10px;
+    height: 0.8rem;
+    font-size: 0.28rem;
+    background-color: #fff; }
+    .wrapper .titleWrapper .title {
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-pack: center;
+      justify-content: center;
+      -ms-flex-align: center;
+      align-items: center;
+      -ms-flex: 1;
+      flex: 1;
+      height: 100%; }
+      .wrapper .titleWrapper .title.active {
+        color: #f27c7c; }
+  .wrapper .scrollerWrapper {
+    position: absolute;
+    top: 1rem;
+    bottom: 0.98rem;
+    width: 100%;
+    overflow: hidden; }
+    .wrapper .scrollerWrapper .listWrapper .list {
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-pack: justify;
+      justify-content: space-between;
+      padding: 15px 12px;
+      background-color: #fff; }
+      .wrapper .scrollerWrapper .listWrapper .list .numContain {
+        font-size: 0.26rem;
+        line-height: 1.5; }
+      .wrapper .scrollerWrapper .listWrapper .list .count {
+        font-size: 0.3rem;
+        color: #f29f5b; }
+  .wrapper .bottomWrapper {
+    position: fixed;
+    bottom: 0;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    box-sizing: border-box;
+    padding: 0 12px;
+    width: 100%;
+    height: 0.98rem;
+    background-color: #fff; }
+    .wrapper .bottomWrapper .title {
+      font-size: 0.28rem; }
+    .wrapper .bottomWrapper .count {
+      font-size: 0.3rem;
+      color: #f29f5b; }

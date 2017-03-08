@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+  <title>余额充值</title>
+  <link rel="stylesheet" href="../common/normalize.css">
+  <link rel="stylesheet" href="recharge.css">
+  <script src="../../static/zepto.js"></script>
+  <script src="./recharge.js"></script>
+</head>
+<body>
+  <div class="main">
+    <!-- 您的余额 -->
+    <div class="myRecharge">
+      <span class="balTitle">您的余额</span>
+      <span class="banlance"></span>
+    </div>
+    <!-- 下部充值部分 -->
+    <div class="chargeWrapper">
+      <!-- 充值金额标题 -->
+      <div class="chooseCount">选择充值金额</div>
+      <!-- 选择充值金额 -->
+      <div class="chooseSum">
+        <!-- ajax动态添加获取数据 -->
+      </div>
+      <!-- 应付金额 -->
+      <div class="pay">应付<span class="money"></span>元</div>
+      <!-- 按钮“立即充值” -->
+      <div class="payNow">立即充值</div>
+      <div class="tips">
+        <p>温馨提示：</p>
+        <p>充值金额只能购买单次服务，不能购买疗程服务</p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,28 @@
+body, html {
+  height: 100%;
+  color: #323232; }
+
+.wrapper {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  font-family: "PingFang-SC-Light"; }
+  .wrapper .title {
+    margin-top: 20%;
+    font-size: 17px; }
+  .wrapper .count {
+    margin: 20px 0 40px 0;
+    font-size: 80px;
+    font-weight: bold; }
+  .wrapper .appointment {
+    width: 90%;
+    height: 50px;
+    line-height: 50px;
+    color: #fff;
+    font-weight: lighter;
+    text-align: center;
+    text-decoration: none;
+    background-color: #f27c7c; }

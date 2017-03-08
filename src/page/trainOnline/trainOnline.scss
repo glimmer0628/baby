@@ -1,0 +1,29 @@
+body, html{
+  height: 100%;
+  color: #323232;
+}
+.wrapper{
+  height: 100%;
+  padding-left: 12px;
+  &>li{
+    display: flex;
+    padding: 12px 0;
+    img{
+      margin-right: 20px;
+    }
+    .abstract{
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      .title{
+        margin: 0 0 32px 0;
+        font-size: 17px;
+        font-weight: normal;
+      }
+      .time{
+        font-size: 11px;
+        color: #adadad;
+      }
+    }
+  }
+}

@@ -1,0 +1,122 @@
+body, html{
+  color: #323232;
+  height: 100%;
+}
+.optionWrapper{
+  height: 100%;
+  background-color: #ebebeb;
+  .itemWrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    padding: 15px 12px;
+    font-size: 0;
+    background-color: #fff;
+    &:last-child{
+      position: relative;
+      margin-bottom: 0;
+    }
+    .posWrapper{
+      display: flex;
+      flex: 1;
+      align-items: center;
+    }
+    .babyWrapper{
+      font-size: 13px;
+      &>li{
+        margin-bottom: 10px;
+        &:last-child{
+          margin-bottom: 0;
+        }
+      }
+      .tip{
+          font-size: 12px
+      }
+      .title{
+        margin-right: 5px;
+      }
+    }
+    .icon_pos{
+      flex: 0 0 14px;
+      display: inline-block;
+      height: 17px;
+      background: url('site.png') left top no-repeat;
+      background-size: 100% 100%;
+    }
+    .icon_arrow{
+      display: inline-block;
+      width: 9px;
+      height: 16px;
+      margin-left: 38px;
+      background: url('25.png') left top no-repeat;
+      background-size: 100% 100%;
+    }
+    .posContainer{
+      flex: 1;
+      margin-left: 9px;
+      font-size: 11px;
+      .tel{
+        margin-bottom: 10px;
+        font-size: 13px;
+        font-family: "PingFang-SC-Medium";
+      }
+    }
+    &>.title{
+      font-size: 13px;
+    }
+    .timeContainer{
+      font-size: 0;
+      color: #999;
+      padding-right: 20px;
+      background: url('25.png') right center no-repeat;
+      background-size: 9px 16px;
+      .time{
+        font-size: 12px;
+        &:nth-child(2){
+          margin-left: 16px;
+        }
+      }
+    }
+  }
+}
+.bottomFixed{
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  width: 100%;
+  height: 46px;
+  font-size: 14px;
+  &>*{
+    flex: 1;
+  }
+  .left{
+    background-color: #fff;
+    line-height: 46px;
+    font-size: 0;
+    .total{
+      margin-left: 11px;
+      margin-right: 8px;
+      font-size: 13px;
+    }
+    .count{
+      color: #eb3737;
+      font-size: 14px;
+    }
+  }
+  .right{
+    line-height: 46px;
+    color: #fff;
+    background-color: #f27c7c;
+    text-align: center;
+    text-decoration: none;
+  }
+}
+#timePicker{
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  width: 100%;
+  height: 100%;
+}

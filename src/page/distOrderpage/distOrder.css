@@ -1,0 +1,61 @@
+/*分销订单*/
+
+body{
+	background: #ebebeb;
+	height: 100%;
+	
+}
+.container{
+	width: 6.4rem;
+	height: 100%;
+	margin: auto;
+	
+}
+/*头部*/
+.order_top{
+	width: 100%;
+	height: 0.8rem;
+	background: #FFFFFF;
+	line-height: 0.8rem;
+}
+.order_top ul{
+	display: flex;
+	justify-content: space-around;
+	font-size: 0.28rem;
+	color: #323232;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	
+}
+.order_top ul li:nth-of-type(1){
+	color: #F27C7C;
+}
+/*内容*/
+.order_contant{
+	width: 100%;
+	height: auto;
+	margin-top: 10px;
+}
+.order{
+	width: 100%;
+	height: 0.98rem;
+	line-height: 0.98rem;
+	background: #FFFFFF;
+	background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100%' height='100%'><line x1='0%' y1='100%' x2='100%' y2='100%' style='stroke:#dfdfdf;stroke-width:1' /></svg>");
+ 	background-repeat: no-repeat;
+	padding: 0 12px;
+	box-sizing: border-box;
+}
+.orderid{
+	color: #323232;
+	font-size: 0.28rem;
+	float: left;
+	/*font-family: "PingFang-SC-Medium";*/
+}
+.ordermoney{
+	color: #f29f5b;
+	font-size: 0.3rem;
+	float: right;
+	font-family: "PingFang-SC-Medium";
+}

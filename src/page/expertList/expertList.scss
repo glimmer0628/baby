@@ -1,0 +1,61 @@
+body, html{
+  width: 100%;
+  height: 100%;
+  color: #000;
+}
+ul{
+  width: 100%;
+  height: 100%;
+  .item{
+    display: flex;
+    padding: 12px 12px 0 12px;
+    width: 100%;
+    height: 87px;
+    box-sizing: border-box;
+    .avatar{
+      margin-right: 15px;
+      width: 46px;
+      height: 46px;
+      border-radius: 50%;
+    }
+    .detail{
+      margin-top: 4px;
+      width: 100%;
+      font-size: 0;
+      .basicInfo{
+        margin-bottom: 10px;
+        .name{
+          font-size: 15px;
+          margin-right: 10px;
+        }
+        .position{
+          font-size: 12px;
+        }
+      }
+      .stars{
+        margin-bottom: 8px;
+        .star{
+          display: inline-block;
+          margin-right: 5px;
+          width: 14px;
+          height: 13px;
+          background: url('star3.png') left top no-repeat;
+          background-size: cover;
+          &.no-star{
+            background-image: url('star2.png');
+          }
+          &:last-child{
+            margin: 0;
+          }
+        }
+      }
+      .summary{
+        font-size: 12px;
+        color: #999;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+    }
+  }
+}

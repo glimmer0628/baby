@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<meta content="yes" name="apple-mobile-web-app-capable">
+	    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+	    <meta content="telephone=no" name="format-detection">
+	    <meta content="email=no" name="format-detection">
+		<title>添加新地址</title>
+		<link rel="stylesheet" href="../common/normalize.css" />
+        <link rel="stylesheet" href="addNew.css">
+        <link rel="stylesheet" type="text/css" href="../../static/MultiPicker.css"/>
+        
+		<script type="text/javascript" src="../../static/rem.js" ></script>
+		<script type="text/javascript" src="../../static/zepto.js" ></script>
+		<script type="text/javascript" src="../../static/MultiPicker.js"></script>
+		<script type="text/javascript" src="../../static/city.js"></script>
+		<script type="text/javascript" src="addNew.js" ></script>
+	</head>
+	<body>
+		<div class="container">
+			<div class="newName">
+				<span>姓名</span>
+				<input class="newname" type="text" placeholder="请输入姓名" />
+			</div>
+			<div class="newPhone">
+				<span>电话</span>
+				<input class="newphone" type="number" placeholder="请输入手机号" />
+			</div>
+			<div class="newdiqu" id="multiPickerInput">
+				<span>所在地区</span>
+				<span class="diqu-icon" ></span>
+				<span class="diqu"></span>
+				
+			</div>
+			<div class="newdizhi">
+				<span>详细地址</span>
+				
+				<textarea class="dizhi"  cols="35" rows="2"></textarea>
+			</div>
+			<button class="saveDizhi">保存</button>
+		
+
+
+		</div>
+		<!-- 地区选择区域 -->
+		<div id="targetContainer"></div>
+	</body>
+	<script>
+   
+    
+</script>
+</html>

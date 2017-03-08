@@ -1,0 +1,115 @@
+
+/*分销首页*/
+
+.container{
+	width: 6.4rem;
+	height: 100%;
+	margin: auto;
+	/*margin-bottom: 1rem;*/
+}
+
+/*头部*/
+.my_top{
+	width: 100%;
+	height: 5rem;
+	
+	background: url(../../assets/_background.png);
+	background-size: 100% 100%;
+	position: relative;
+}
+.my_icon{
+	height: 1.3rem;
+	width: 100%;
+	padding: 0 12px;
+	box-sizing: border-box;
+	position: absolute;
+	bottom: 0.4rem;
+	line-height: 50px;
+}
+
+.my_touxiang{
+	width: 1.3rem;
+	height: 1.3rem;
+	border-radius: 50%;
+	float: left;
+}
+.my_name{
+	display: inline-block;
+	font-size: 14px;
+	margin-left: 10px;
+	color: #000000;
+	
+}
+.my_icon a{
+	float: right;
+	
+}
+.my_icon a img{
+	width: 9px;
+	height: 17px;
+}
+.dist_main1,.dist_main2{
+	width: 100%;
+	display: flex;
+	
+	}
+.dist_main1>div,.dist_main2>div{
+	height: 2rem;
+	flex: 1;
+	float: left;
+	background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100%' height='100%'><line x1='0%' y1='100%' x2='100%' y2='100%' style='stroke:#e6e6e6;stroke-width:1' /><line x1='100%' y1='0%' x2='100%' y2='100%' style='stroke:#e6e6e6;stroke-width:1' /></svg>");
+ 	background-repeat: no-repeat;
+ 	color: #323232;
+ 	font-size: 13px;
+ 	display: flex;
+ 	flex-direction: column;
+ 	text-align: center;
+ 	
+ 	
+ 	}
+ 	
+.dist_main1>div{
+	padding-top: 0.6rem;
+ 	box-sizing: border-box;
+}
+.dist_main1>div:last-child{
+	background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100%' height='100%'><line x1='0%' y1='100%' x2='100%' y2='100%' style='stroke:#e6e6e6;stroke-width:1' /></svg>");
+ 	background-repeat: no-repeat;
+ 	position: relative;
+}	
+.money1,.money2{
+	color: #eb3737; 
+	font-size: 25px;
+	margin-bottom: 10px;
+	}
+		
+.tixianbt{
+	border: 0;
+	width: 1.3rem;
+	height: 0.6rem;
+	color: #FFFFFF;
+	background: #F27C7C;
+	border-radius: 4px;
+	position: absolute;
+	left: 20%;
+	right: 0;
+	
+	bottom: 35px;
+	outline: none;
+}
+
+.dist_main2>div a{
+	text-decoration: none;
+	color: #323232;
+	
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	margin-top: 15%;
+}
+.dist_main2>div a img{
+	width: 0.96rem;
+	height: 0.96rem;
+	margin: auto;
+	margin-bottom: 10px;
+}

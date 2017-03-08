@@ -1,0 +1,89 @@
+/*评论页面*/
+body, html{
+	background: #ebebeb;
+	height: 100%;
+	
+}
+
+.container{
+	width: 6.4rem;
+	height: 100%;
+	margin: auto;
+	padding: 0.24rem;
+	box-sizing: border-box;
+	
+}
+.comment_contant{
+	width: 100%;
+	height: 5.58rem;
+	background-color:#FFFFFF ;
+}
+/*头部技师信息和时间*/
+.comment_top{
+	height: 70px;
+	width: 85%;
+	padding: 14px 0px;
+	margin: auto;
+	border-bottom: 1px solid #E6E6E6;
+	font-size: 14px;
+}
+.comment_top img{
+	width: 38px;
+	height: 38px;
+	border-radius: 50%;
+	float: left;
+}
+.comment_top div{
+	float: left;
+	margin-left: 10px;
+	color: #000000;
+	font-size: 14px;
+}
+.comment_top div span:nth-of-type(1){
+	display: block;
+	margin-bottom: 10px;
+}
+.comment_main{
+	color: #999999;
+	font-size: 15px;
+	text-align: center;
+	padding-top: 0.4rem;
+	box-sizing: border-box;
+}
+#star{
+	margin: auto;
+	margin-top: 0.3rem;
+}
+#star img{
+	width: 22px;
+	margin-right: 10px;
+}
+
+.pingLun{
+	width: 92%;
+	height: 2rem;
+	resize : none;
+	margin-top: 0.5rem;
+	margin-left: 4%;
+	border: 1px solid #E6E6E6;
+	font-size: 14px;
+	outline: none;
+	padding: 10px;
+	box-sizing: border-box;
+}
+
+/*评价按钮*/
+.commentbt{
+	width: 100%;
+	height: 0.88rem;
+	line-height: 0.88rem;
+	
+	text-align: center;
+	background-color: #F27C7C;
+	color: #FFFFFF;
+	font-size: 16px;
+	letter-spacing: 1px;
+	margin: auto;
+	margin-top: 20px;
+	outline: none;
+}

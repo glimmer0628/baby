@@ -1,0 +1,100 @@
+body, html{
+  height: 100%;
+  color: #323232;
+}
+.main{
+  width: 100%;
+  height: 100%;
+  background-color: #ebebeb;
+  .summaryInfo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+    height: 167px;
+    background-color: #fff;
+    .avatar{
+      border-radius: 50%;
+    }
+    .name{
+      display: inline-block;
+      margin-top: 12px;
+      margin-bottom: 10px;
+      font-size: 14px;
+    }
+    .position{
+      display: inline-block;
+      font-size: 12px;
+      margin-bottom: 10px;
+    }
+    .star{
+      display: inline-block;
+      margin-right: 5px;
+      width: 14px;
+      height: 13px;
+      background: url('star3.png') left top no-repeat;
+      background-size: cover;
+      &.no-star{
+        background-image: url('star2.png');
+      }
+      &:last-child{
+        margin: 0;
+      }
+    }
+  }
+  .contentWrapper{
+    position: absolute;
+    top: 177px;
+    bottom: 10px;
+    width: 100%;
+    background-color: #fff;
+    h3{
+      margin: 13px 0 13px 12px;
+      color: #000;
+      font-size: 14px;
+      font-weight: normal;
+      &.expertTitle{
+        position: absolute;
+        top: 122px;
+        margin-top: 19px;
+      }
+    }
+    .imgWrapper{
+      position: absolute;
+      top: 42px;
+      width: 100%;
+      padding: 0 12px;
+      font-size: 0;
+      box-sizing: border-box;
+      overflow: hidden;
+      .scroller{
+        overflow: hidden;
+        ul{
+          float: left;
+          width: 700px;
+          li{
+            margin-right: 6px;
+            float: left;
+            &:last-child{
+              margin-right: 0;
+            }
+          }
+        }
+      }
+    }
+    .expertInfo{
+      position: absolute;
+      top: 170px;
+      bottom: 0;
+      margin: 0 12px;
+      overflow: hidden;
+      font-size: 12px;
+      color: #999;
+      text-indent: 24px;
+      p{
+        margin: 0;
+      }
+    }
+  }
+}

@@ -1,0 +1,72 @@
+body, html{
+  height: 100%;
+  color: #323232;
+}
+.wrapper{
+  box-sizing: border-box;
+  padding-top: 14px;
+  height: 100%;
+  background-color: #ebebeb;
+  .withdrawContent{
+    position: relative;
+    box-sizing: border-box;
+    margin: auto;
+    padding-top: 15px;
+    padding-left: 20px;
+    width: 95%;
+    height: 213px;
+    background-color: #FAFAFA;
+    .title{
+      font-size: 14px;
+    }
+    .payWrapper{
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      display: flex;
+      flex-direction: column;
+      box-sizing: border-box;
+      padding: 15px 20px;
+      width: 100%;
+      height: 168px;
+      background-color: #fff;
+      .title{
+        font-size: 13px;
+      }
+      .inputWrapper{
+        position: relative;
+        flex: 0 0 55px;
+        .unit{
+          display: inline-block;
+          margin-top: 17px;
+          margin-right: 23px;
+          font-size: 18px;
+        }
+        .inputPay{
+          position: absolute;
+          left: 0;
+          box-sizing: border-box;
+          padding-left: 25px;
+          width: 100%;
+          height: 100%;
+          font-size: 27px;
+          text-align: left;
+          background-color: transparent;
+          outline: none;
+          border: none;
+        }
+      }
+      .withdrawBtn{
+        margin: 20px auto 0 auto;
+        width: 243px;
+        height: 40px;
+        line-height: 40px;
+        text-align: center;
+        color: #fff;
+        border-radius: 5px;
+        background-color: #f27c7c;
+        text-decoration: none;
+      }
+    }
+  }
+}

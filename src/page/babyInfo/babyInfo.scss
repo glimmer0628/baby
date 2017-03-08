@@ -1,0 +1,68 @@
+body, html{
+  height: 100%;
+  color: #323232;
+}
+.wrapper{
+  height: 100%;
+  background-color: #ebebeb;
+  .itemContent{
+    &>li{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 14px 12px;
+      background-color: #fff;
+      &:last-child{
+        position: relative;
+      }
+      .title{
+        font-size: 14px;
+      }
+      .inputName{
+        margin-right: 18px;
+        width: 80px;
+        font-size: 12px;
+        text-align: right;
+        border: none;
+        outline: none;
+      }
+      .sex{
+        margin-right: 20px;
+        font-size: 12px;
+      }
+      .timeContainer{
+        font-size: 0;
+        color: #999;
+        padding-right: 20px;
+        background: url('25.png') right center no-repeat;
+        background-size: 9px 16px;
+        .time{
+          font-size: 12px;
+          &:nth-child(2){
+            margin-left: 16px;
+          }
+        }
+      }
+    }
+  }
+  .submitBtn{
+    display: block;
+    margin: auto;
+    margin-top: 20px;
+    width: 90%;
+    height: 44px;
+    line-height: 44px;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    background-color: #f27c7c;
+  }
+}
+#timePicker{
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  width: 100%;
+  height: 100%;
+}

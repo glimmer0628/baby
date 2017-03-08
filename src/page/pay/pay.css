@@ -1,0 +1,62 @@
+body, html {
+  height: 100%;
+  font-size: 15px;
+  color: #323232; }
+
+.wrapper {
+  height: 100%;
+  background-color: #EBEBEB; }
+  .wrapper .title {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    padding: 18px 12px;
+    font-size: 15px;
+    background-color: #fff; }
+    .wrapper .title .right {
+      font-size: 20px;
+      color: #eb3737; }
+  .wrapper .pay {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    padding: 12px 12px;
+    background-color: #fff; }
+    .wrapper .pay .left {
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-align: center;
+      align-items: center; }
+      .wrapper .pay .left .balance {
+        display: inline-block;
+        margin-right: 9px;
+        width: 17px;
+        height: 18px;
+        background: url("3.png") left top no-repeat;
+        background-size: contain; }
+        .wrapper .pay .left .balance.wechatPay {
+          background-image: url("4.png"); }
+      .wrapper .pay .left .text {
+        font-size: 14px; }
+    .wrapper .pay .right {
+      display: inline-block;
+      width: 19px;
+      height: 19px;
+      background: url("6.png") left top no-repeat;
+      background-size: contain; }
+      .wrapper .pay .right.default {
+        background-image: url("5.png"); }
+  .wrapper .submitBtn {
+    display: block;
+    margin: 20px auto 0 auto;
+    width: 95%;
+    height: 44px;
+    line-height: 44px;
+    color: #fff;
+    background-color: #f27c7c;
+    text-align: center; }

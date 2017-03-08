@@ -1,0 +1,66 @@
+body, html{
+  height: 100%;
+  font-size: 15px;
+  color: #323232;
+}
+.wrapper{
+  height: 100%;
+  background-color: #EBEBEB;
+  .title{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    padding: 18px 12px;
+    font-size: 15px;
+    background-color: #fff;
+    .right{
+      font-size: 20px;
+      color: #eb3737;
+    }
+  }
+  .pay{
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 12px;
+    background-color: #fff;
+    .left{
+      display: flex;
+      align-items: center;
+      .balance{
+        display: inline-block;
+        margin-right: 9px;
+        width: 17px;
+        height: 18px;
+        background: url('3.png') left top no-repeat;
+        background-size: contain;
+        &.wechatPay{
+          background-image: url('4.png');
+        }
+      }
+      .text{
+        font-size: 14px;
+      }
+    }
+    .right{
+      display: inline-block;
+      width: 19px;
+      height: 19px;
+      background: url('6.png') left top no-repeat;
+      background-size: contain;
+      &.default{
+        background-image: url('5.png');
+      }
+    }
+  }
+  .submitBtn{
+    display: block;
+    margin: 20px auto 0 auto;
+    width: 95%;
+    height: 44px;
+    line-height: 44px;
+    color: #fff;
+    background-color: #f27c7c;
+    text-align: center;
+  }
+}

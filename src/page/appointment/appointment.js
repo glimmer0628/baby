@@ -21,7 +21,7 @@ $(document).ready(function() {
   var myScroll;
 	// 请求后台数据
 	$.ajax({
-		url: 'http://192.168.3.172/tuina/api.php?s=/system/Weichart/getOrderInfo',
+		url: "http://"+ip+"/tuina/api.php?s=/system/Weichart/getOrderInfo",
 		type: 'POST',
 		data: {
 			ids: diseaseID

@@ -1,14 +1,14 @@
 $(document).ready(function() {
   // 载入页面时向服务器请求数据
   $.ajax({
-    url: 'http://192.168.3.172/tuina/api.php?s=/user/weichart/getTechnicianInfo',
+    url: "http://"+ip+"/tuina/api.php?s=/user/weichart/getTechnicianInfo",
     type: 'GET',
     success: function(data) {
       // 遍历数据 向模版中对应添加数据，并插入到dom元素中
       data.forEach(function(item) {
       	console.log(item);
         var tpl = '<li class="item border-1px" data-id="' + item.id + '">' +
-                    '<img src="http://192.168.3.172/tuina' + item.img_id + '" class="avatar" width="46" height="46" alt="avatar">' +
+                    '<img src="http://'+ip+'/tuina' + item.img_id + '" class="avatar" width="46" height="46" alt="avatar">' +
                     '<div class="detail">' +
                       '<div class="basicInfo">' +
                         '<span class="name">' + item.user_name + '</span>' +

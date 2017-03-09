@@ -22,7 +22,7 @@
 		 var arr=[];//存放症状id的数组
 		//				轮播图
 		$.ajax({
-            url:"http://192.168.3.172/tuina/api.php?s=/system/Weichart/getBanner",
+            url:"http://"+ip+"/tuina/api.php?s=/system/Weichart/getBanner",
             type:"get",
             dataType:"json",
 //          jsonp:'callback',  
@@ -31,7 +31,7 @@
             	
             	//轮播图----》开始
                 $(data.lunbo).each(function(i) {
-                    $(".swiper-wrapper").append("<li class='swiper-slide'><a href='http://"+this.content_url+"'><img src='http://192.168.3.172/tuina"+this.img_url+"' /></a></li>");
+                    $(".swiper-wrapper").append("<li class='swiper-slide'><a href='http://"+this.content_url+"'><img src='http://"+ip+"/tuina"+this.img_url+"' /></a></li>");
 	
                 });
                 //swiper插件
@@ -53,7 +53,7 @@
                			$(".choose").append("<div class='choose_row'></div>");
                			for(var j=0;j<3;j++){
                				var num=i*3+j;
-               				$(".choose_row").last().append("<div class='li_svg1' zhengzhuangID="+data.yuyue[num].id+"><img src='http://192.168.3.172/tuina"+data.yuyue[num].img_url+"'/><span>"+data.yuyue[num].name+"</span></div>");
+               				$(".choose_row").last().append("<div class='li_svg1' zhengzhuangID="+data.yuyue[num].id+"><img src='http://"+ip+"/tuina"+data.yuyue[num].img_url+"'/><span>"+data.yuyue[num].name+"</span></div>");
                			}
                		}
 
@@ -141,7 +141,7 @@
 	    });	
 	    //公司简介
 		$.ajax({
-        url:"http://192.168.3.172/tuina/api.php?s=/system/Weichart/getCompany",
+        url:"http://"+ip+"/tuina/api.php?s=/system/Weichart/getCompany",
         type:"get",
         dataType:"json",
         success: function(data) {

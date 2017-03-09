@@ -27,41 +27,26 @@ $(document).ready(function() {
 	// 进入页面时从本地存储中读取地址信息
 	
 	// 读取是否有默认或编辑两种类型中的一个
-	if (localStorage.parentInfo || localStorage.editAdd) {
+//	alert(localStorage.checkedInfo);
+	if (localStorage.parentInfo || localStorage.checkedInfo) {
 		$('.tip').last().css({
 			'font-size': '0'
 		});
 		// 若有默认地址，则将变量赋值为默认地址，
 		// 若无默认地址，则用户第一次进入程序，变量赋值
 		// 为编辑地址
-		if (localStorage.parentInfo) {
+		if (localStorage.checkedInfo) {
+			var parentInfo = JSON.parse(localStorage.checkedInfo);
+		} else if (localStorage.parentInfo) {
 			var parentInfo = JSON.parse(localStorage.parentInfo);
-		} else {
-			var parentInfo = JSON.parse(localStorage.editAdd);
-			localStorage.parentInfo = localStorage.editAdd;
 		}
 		// 从本地存储中获取电话并添加至dom元素中
 		$('.tel').html(parentInfo.phone);
 		// 从本地存储中获取地址并添加至dom元素中
 		$('.address').html((parentInfo.address1 + parentInfo.address2).replace(/\s+/g, ""));
+		// 将id存到dom元素上
+		$('.posWrapper').attr('add-id', parentInfo.id);
 	}
-	
-  // 后进行ajax异步请求，获取最新数据
-//$.ajax({
-//  url: 'account.json',
-//  type: 'GET',
-//  success: function(data) {
-//    // 添加宝宝信息
-//    $('.babyName').html(data.babyInfo.name);
-//    $('.babySex').html(data.babyInfo.sex);
-//    $('.babyBirth').html(data.babyInfo.birthday[0] + '年' + data.babyInfo.birthday[1] + '月' + data.babyInfo.birthday[2] + '日');
-//
-//    // 添加地址信息
-//    $('.tel').html(data.address.tel);
-//    $('.address').html(data.address.addDetail);
-//
-//  }
-//});
 
   // 把当前时间插入“上门时间中”
   var date = new Date();
@@ -96,12 +81,58 @@ $(document).ready(function() {
 		window.location.href="../babyInfo/babyInfo.html";
 	});
 	$(".itemWrapper:nth-of-type(2)").click(function() {
-		window.location.href="../addNewpage/addNew.html?default=true";
+		window.location.href="../addresspage/address.html?order=true";
 	});
 	$('.right').click(function(e) {
+		e.preventDefault();
 		if ($('.tip').css('font-size') == '12px') {
-			e.preventDefault();
 			alert('请填写完整信息');
+		} else {
+			// 向后台提交订单信息
+			var openid = JSON.parse(sessionStorage.userInfo).openid;
+			// 选择项目的id
+			var service_id = sessionStorage.diseaseID;
+			// 选择套餐的id
+			var service_type = sessionStorage.chosenId.split(',')[1];
+			// 选择技师类型id
+			var user_type = sessionStorage.chosenId.split(',')[0];
+			// 选择上门时间
+			var start_time = $('.time').first().text().replace(/-/g, '') + $('.time').last().text().replace(/:/g, '');
+			// 选择地址id
+			var address_id = $('.posWrapper').attr('add-id');
+			// 获取订单金额
+			var money = localStorage.price;
+			// 获取宝宝出生日期
+			var birth_date = [];
+			babyInfo.birth.split(',').forEach(function(item) {
+				if (item <= 10) {
+					item = '0' + item;
+				}
+				birth_date.push(item);
+			});
+			// 向后台发送订单数据
+			$.ajax({
+				type:"post",
+				url:"http://" + ip + "/tuina/api.php?s=/order/Weichart/setOrder",
+				async:true,
+				data: {
+					id: openid,
+					service_id: service_id,
+					service_type: service_type,
+					user_type: user_type,
+					start_time: start_time,
+					address_id: address_id,
+					money: money,
+					name: babyInfo.name,
+					sex: babyInfo.sex == '男' ? 0 : 1,
+					birth_date: birth_date.join(',').replace(/,/g, '')
+				},
+				success: function(data) {
+					if (data === 'Success') {
+						window.location.href = '../pay/pay.html';
+					};
+				}
+			});
 		}
 	});
 });

@@ -62,23 +62,46 @@ $(document).ready(function() {
 	    	birth: babyBirth
 	    };
 	    localStorage.babyInfo = JSON.stringify(babyInfo);
-//  	window.location.href = '../account/account.html';
-
-		window.history.back();
+	    
+	    // 对发送给后台的数据进行处理
+	    
+	    // 性别
+	    var sex;
+	    if (babySex == '男') {
+	    	sex = 0;
+	    } else {
+	    	sex = 1;
+	    };
+	    
+	    // openid
+	    var openid = JSON.parse(sessionStorage.userInfo).openid;
+	    
+	    // birthday
+	    var birth_date = date.replace(/-/g, '');
+	    // 向后台发送宝宝信息数据，并存储
+	    $.ajax({
+	    	type:"post",
+	    	url:"http://" + ip + "/tuina/api.php?s=/user/Weichart/setUserInfo",
+	    	async:true,
+	    	data: {
+	    		id: openid,
+	    		baby_name: babyName,
+	    		birth_date: birth_date,
+	    		sex: sex
+	    	},
+	    	success: function(data) {
+	    		if (data === 'Success') {
+	//	    		 成功后再跳转页面
+					setTimeout(function() {
+				    	window.location.href = '../account/account.html';
+					}, 300);
+	    		};
+	    	}
+	    });
     }
     
   });
   
-//$.ajax({
-//	type:"post",
-//	url:"/babyInfo",
-//	data: {
-//		babyInfo: babyInfo
-//	},
-//	success: function(res) {
-//		
-//	}
-//});
 });
 
 
@@ -97,7 +120,7 @@ function insertTime(arrry) {
   $('.timeContainer .time').html(arr[0] + '-' + arr[1] + '-' + arr[2]);
 }
 
-// 传入YYYY-MM-DD MM:SS格式的字符串，返回一个[YYYY, MM, DD, MM, SS]格式的数组
+// 传入YYYY-MM-DD格式的字符串，返回一个[YYYY, MM, DD]格式的数组
 function dateStrToArr(dateStr) {
   var dateReg = /^(\d{4})(\-|\/|\.)(\d{1,2})\2(\d{1,2})$/;
   var strArr = dateStr.replace(dateReg, '$1,$3,$4');

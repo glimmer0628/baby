@@ -28,7 +28,7 @@
 //          jsonp:'callback',  
 //          jsonpCallback:"successCallback",
             success: function(data){
-            	
+            	console.log(data);
             	//轮播图----》开始
                 $(data.lunbo).each(function(i) {
                     $(".swiper-wrapper").append("<li class='swiper-slide'><a href='http://"+this.content_url+"'><img src='http://"+ip+"/tuina"+this.img_url+"' /></a></li>");
@@ -121,6 +121,13 @@
 				  document.body.removeChild(testElem);
 				}
 				//九种症状的选择----》结束
+				//微信头像昵称--->开始
+				
+           		$(".my_touxiang").attr('src',data.userInfo.img_id);
+           		$(".my_name").html(data.userInfo.nickname);
+           		var userInfo=JSON.stringify(data.userInfo);
+           		sessionStorage.userInfo=userInfo;
+           		//微信头像昵称--->结束
             },
             error: function() {
      		alert('失败');
@@ -180,8 +187,6 @@
                 dataType:"json",
                 success: function(data) {
                 	//console.log(data);
-               		$(".my_touxiang").attr('src',data.img);
-               		$(".my_name").html(data.name);
                 },
                 error: function() {
          		alert('失败');

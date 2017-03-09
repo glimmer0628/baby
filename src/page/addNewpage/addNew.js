@@ -38,15 +38,16 @@ $("").ready(function() {
 		}else{
 			//把姓名，手机号，地区，详细地址存入本地
 			var parentInfo={
+				addressid:GetQueryString('addressid'),
 				name:$(".newname").val(),
 				address1:$(".diqu").html(),
 				address2:$(".dizhi").val(),
 				phone:$(".newphone").val()
 			};
-			//如果是新增地址，从地址栏获取id,放进parentInfo里
-			if (GetQueryString('new') == 'true') {
-				parentInfo.addressid = GetQueryString('addLen');
-			}
+			//如果是编辑地址，从地址栏获取id,放进parentInfo里
+			
+			//parentInfo.addressid = GetQueryString('addressid');
+			
 			//存入到本地存储编辑的地址（editAdd）
 			localStorage.editAdd = JSON.stringify(parentInfo);
 			// 如果localStorage里有地址，并且编辑的地址id跟默认的地址id相同，保存到默认地址
@@ -57,7 +58,31 @@ $("").ready(function() {
 					
 				}
 			}
-			window.history.back();
+			//向后台发送地址信息
+			// openid
+	  		var openid = JSON.parse(sessionStorage.userInfo).openid;
+			$.ajax({
+	    	type:"post",
+	    	url:"http://" + ip + "/tuina/api.php?s=/user/Weichart/addUserAddress",
+	    	async:true,
+	    	data: {
+	    		id: openid,
+	    		address_id:GetQueryString('addressid'),
+	    		user_name: $(".newname").val(),
+	    		mobile: $(".newphone").val(),
+	    		address1: $(".diqu").html(),
+	    		address2:$(".dizhi").val()
+	    	},
+	    	success: function(data) {
+	    		if (data === 'Success') {
+	//	    		 成功后再跳转页面
+					setTimeout(function() {
+				    	window.history.back();
+					}, 300);
+	    		};
+	    	}
+	    });
+			
 		}
 //		-----------------------------------> post请求向数据库提交
 	});
@@ -88,7 +113,7 @@ $("").ready(function() {
     //---------------------函数调用结束---------------------
 
 });
-
+//获取地址栏参数
 function GetQueryString(name)
 {
     var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)");

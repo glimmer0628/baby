@@ -66,11 +66,15 @@ body{
 	float: left;
 }
 
-.moren span:nth-of-type(1){	
-	background:url(../../assets/box5.png);
-	
-}
 
+.moren-icon{
+	background:url(../../assets/box5.png);
+	background-size:100% 100%;
+}
+.moren-icon1{
+	background: url(../../assets/21.png);
+	background-size:100% 100%;
+}
 /*编辑*/
 .bianji{
 	float: right;

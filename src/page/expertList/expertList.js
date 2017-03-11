@@ -30,6 +30,8 @@ $(document).ready(function() {
       
       //	跳转页面
 			$(".item").click(function() {
+				// 存expretid到sessionStorage
+				sessionStorage.expertId = $(this).attr('data-id');
 				window.location.href="../expert/expert.html";
 			});
     },

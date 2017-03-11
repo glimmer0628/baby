@@ -55,9 +55,9 @@ $("").ready(function() {
                 	$(data).each(function(i) {
                 		var order_top="<div class='order_number'>工单号："+data[i].order_num+"</div>"+btnDom;
                 		var order_bottom="<div>地点："+data[i].address_id+"</div><div>预约时间：<span>"+data[i].start_time+"</span></div>";
-                		$('.order_contant').append("<div class='order' order_id="+data[i].id+"><div class='orderTop'>"+order_top+"</div><div class='orderBottom'>"+order_bottom+"</div></div>");
-                	
+                		$('.order_contant').append("<div class='order' order_price=" + data[i].order_money + " order_id="+data[i].id+" order_counts="+data[i].order_counts+"><div class='orderTop'>"+order_top+"</div><div class='orderBottom'>"+order_bottom+"</div></div>");
                 	});
+            		
                 		//	取消
 						$('.btn_del').click(function(e) {
 							e.stopPropagation();
@@ -80,8 +80,13 @@ $("").ready(function() {
 					    //	付款
 						$('.btn_pay').click(function(e) {
 							e.stopPropagation();
-					        window.location.href="../pay/pay.html";
-					    });
+              var orderid=$(this).parents('.order').attr('order_id');
+							var order_counts=$(this).parents('.order').attr('order_counts');
+              sessionStorage.order_counts=order_counts;
+							sessionStorage.priceId=orderid;
+
+			        window.location.href="../pay/pay.html";
+					   });
 						//	评价
 						$('.btn_com').click(function(e) {
 							e.stopPropagation();
@@ -95,8 +100,11 @@ $("").ready(function() {
 					    //点击查看订单详情
 					    $(".order").click(function() {
 					    	var orderid=$(this).attr('order_id');
+					    	var order_counts=$(this).attr('order_counts');
+					    	
 					    	sessionStorage.orderid=orderid;
-					    	 window.location.href="../orderDetail/orderDetail.html";
+					    	sessionStorage.order_counts=order_counts;
+				    		window.location.href="../orderDetail/orderDetail.html";
 					    });
                 	
                 }

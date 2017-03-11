@@ -3,7 +3,7 @@ $(document).ready(function() {
 
   // 刚进入页面时，读取本地存储数据，后进行请求初始化单号
   getLocalStorage('all');
-  getAjaxInsert('all.json', 'all', myScroll);
+  getAjaxInsert('http://' + ip + '/tuina/api.php?s=/finance/weichart/getUserWithdraw', '', 'all', myScroll);
 
   // 点击标题时触发的事件
   $('.titleWrapper .title').click(function(e) {
@@ -15,31 +15,25 @@ $(document).ready(function() {
   // 点击"所有"按钮
   $($('.titleWrapper .title').get(0)).click(function() {
     getLocalStorage('all');
-    getAjaxInsert('all.json', 'all', myScroll);
+    getAjaxInsert('http://' + ip + '/tuina/api.php?s=/finance/weichart/getUserWithdraw', '', 'all', myScroll);
   });
 
   // 点击"待审核"按钮
   $($('.titleWrapper .title').get(1)).click(function() {
     getLocalStorage('pending');
-    getAjaxInsert('pending.json', 'pending', myScroll);
+    getAjaxInsert('http://' + ip + '/tuina/api.php?s=/finance/weichart/getUserWithdraw', '0', 'all', myScroll);
   });
 
-  // 点击"待打款"按钮
+  // 点击"已完成"按钮
   $($('.titleWrapper .title').get(2)).click(function() {
-    getLocalStorage('toBePaied');
-    getAjaxInsert('toBePaied.json', 'toBePaied', myScroll);
-  });
-
-  // 点击"已打款"按钮
-  $($('.titleWrapper .title').get(3)).click(function() {
     getLocalStorage('paied');
-    getAjaxInsert('paied.json', 'paied', myScroll);
+    getAjaxInsert('http://' + ip + '/tuina/api.php?s=/finance/weichart/getUserWithdraw', '1', 'all', myScroll);
   });
 
   // 点击"无效"按钮
-  $($('.titleWrapper .title').get(4)).click(function() {
+  $($('.titleWrapper .title').get(3)).click(function() {
     getLocalStorage('invalid');
-    getAjaxInsert('invalid.json', 'invalid', myScroll);
+    getAjaxInsert('http://' + ip + '/tuina/api.php?s=/finance/weichart/getUserWithdraw', '2', 'all', myScroll);
   });
 });
 
@@ -53,11 +47,16 @@ function getLocalStorage(localKey) {
 }
 
 // 传入请求地址,localStorage的key及iscroll（为了刷新dom树），将请求到的数据添加到dom树中
-function getAjaxInsert(url, localKey, myScroll) {
+function getAjaxInsert(url, status, localKey, myScroll) {
   $.ajax({
     url: url,
-    type: 'GET',
+    type: 'POST',
+    data: {
+      id: JSON.parse(sessionStorage.userInfo).openid,
+      status: status
+    },
     success: function(data) {
+    	console.log(data);
       // 现将请求到的数据添加到localStorage中
       localStorage.setItem(localKey, JSON.stringify(data));
 
@@ -68,6 +67,9 @@ function getAjaxInsert(url, localKey, myScroll) {
       
       // 添加dom元素
       appendList(data, myScroll);
+
+      // 如果status为空，则给底部总计加上总金额
+      // $('.bottomWrapper .count').html(data.);
     },
     error: function() {
       alert('啊哦，网络开小差了，未更新数据');
@@ -79,18 +81,28 @@ function getAjaxInsert(url, localKey, myScroll) {
 function appendList(data, myScroll) {
   // 遍历数据，将dom元素添加至相应容器中
   data.forEach(function(item) {
-    var tpl = '<li class="border-1px list">' +
-                '<div class="numContain">' +
-                  '单号:' +
-                  '<span class="num">' + item.num + '</span>' +
-                '</div>' +
-                '<span class="count">' + item.count + '元</span>' +
-              '</li>';
+    // 确认数据是否为空
+    if(!item.withdraw_num || !item.withdraw_fee) {
+      var tpl = '';
+    } else {
+      var tpl = '<li class="border-1px list">' +
+                  '<div class="numContain">' +
+                    '单号:' +
+                    '<span class="num">' + item.withdraw_num + '</span>' +
+                  '</div>' +
+                  '<span class="count">' + item.withdraw_fee + '元</span>' +
+                '</li>';
+    }
     $(tpl).appendTo($('.listWrapper'));
 
+
     // 添加完成后刷新iscroll，使得其dom树跟随变化
-    if (myScroll) {
-      myScroll.refresh();
-    }
+	  if (!item.total) {
+	    data[0].total = '0.00';
+	  }
+	  $('.bottomWrapper .count').html(item.total +'元');
   });
+  if (myScroll) {
+    myScroll.refresh();
+  }
 }

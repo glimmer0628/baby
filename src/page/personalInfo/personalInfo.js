@@ -58,7 +58,8 @@ $(document).ready(function() {
   // 读取本地存储的数据
   $('.parentInfo:nth-of-type(1)').click(function() {
     // 跳转页面，读取默认地址的数据
-  	window.location.href="../addNewpage/addNew.html?default=true";
+    
+  	window.location.href="../addNewpage/addNew.html?default=true&addressid="+parentInfo.id;
   });
   $('.parentInfo:nth-of-type(2)').click(function() {
     // 跳转到宝宝信息的修改页

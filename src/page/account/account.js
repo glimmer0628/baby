@@ -110,6 +110,8 @@ $(document).ready(function() {
 				}
 				birth_date.push(item);
 			});
+			
+			
 			// 向后台发送订单数据
 			$.ajax({
 				type:"post",
@@ -128,10 +130,15 @@ $(document).ready(function() {
 					birth_date: birth_date.join(',').replace(/,/g, '')
 				},
 				success: function(data) {
-					if (data === 'Success') {
+          sessionStorage.priceId = data;
+          console.log(data);
+					if (data) {
 						window.location.href = '../pay/pay.html';
 					}
 					
+				},
+				error: function(err) {
+					console.log(err);
 				}
 			});
 		}

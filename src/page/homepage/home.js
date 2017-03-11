@@ -1,4 +1,6 @@
 	$("").ready(function(){
+//		localStorage.clear();
+//		sessionStorage.clear();
 		//第一次进入页面时，是首页还是个人中心页
 		if(sessionStorage.homeSwitch === 'true'){//个人中心页显示
 			
@@ -121,8 +123,8 @@
 				  document.body.removeChild(testElem);
 				}
 				//九种症状的选择----》结束
-				//微信头像昵称--->开始
 				
+				//微信头像昵称--->开始
            		$(".my_touxiang").attr('src',data.userInfo.img_id);
            		$(".my_name").html(data.userInfo.nickname);
            		var userInfo=JSON.stringify(data.userInfo);
@@ -179,19 +181,6 @@
 //		}
 //  	});    
 		
-  	        	
-//		个人中心头像和昵称
-		$.ajax({
-                url:"myname.json",
-                type:"get",
-                dataType:"json",
-                success: function(data) {
-                	//console.log(data);
-                },
-                error: function() {
-         		alert('失败');
-   				}
-            });
 			
 //			跳转页面
 			

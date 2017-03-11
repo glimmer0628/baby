@@ -93,7 +93,7 @@ $(document).ready(function() {
 	    		if (data === 'Success') {
 	//	    		 成功后再跳转页面
 					setTimeout(function() {
-				    	window.location.href = '../account/account.html';
+				    	window.history.back();
 					}, 300);
 	    		}
 	    	}

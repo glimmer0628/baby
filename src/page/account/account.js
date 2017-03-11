@@ -130,7 +130,8 @@ $(document).ready(function() {
 				success: function(data) {
 					if (data === 'Success') {
 						window.location.href = '../pay/pay.html';
-					};
+					}
+					
 				}
 			});
 		}

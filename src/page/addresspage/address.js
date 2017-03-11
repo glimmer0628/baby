@@ -24,7 +24,7 @@ $("").ready(function() {
            					phone:data[i].mobile,
            					address1:data[i].address,
            					address2:data[i].address_info
-           				}
+           				};
            				console.log(parentInfo);
            				localStorage.parentInfo = JSON.stringify(parentInfo);
            			} else {
@@ -93,8 +93,8 @@ $("").ready(function() {
 					setTimeout(function() {
 						if (GetQueryString('order') == 'true') {
 							window.location.href="../account/account.html";
-						};
-					}, 300)
+						}
+					}, 300);
   				});
             },
             error: function() {
@@ -138,6 +138,6 @@ function getAddInfo(vm){
 			phone:parentEle.find('.address_phone').text(),
 			address1:parentEle.find('.address_address1').text(),
 			address2:parentEle.find('.address_address2').text()
-		}
+		};
     return editAdd;
 }

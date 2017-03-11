@@ -61,7 +61,7 @@ body{
 	float: left;
 	font-size: 15px;
 }
-.btn_del,.btn_com{
+.btn_del,.btn_com,.btn_pay{
 	width: 0.96rem;
 	height: 0.44rem;
 	border-radius: 4px;
@@ -72,6 +72,9 @@ body{
 	border: 0;
 	margin-top: 12px;
 	outline: none;
+}
+.btn_pay{
+	margin-right: 10px;
 }
 .orderBottom{
 	height: 1.6rem;

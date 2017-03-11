@@ -71,7 +71,7 @@ $(document).ready(function() {
 	    	sex = 0;
 	    } else {
 	    	sex = 1;
-	    };
+	    }
 	    
 	    // openid
 	    var openid = JSON.parse(sessionStorage.userInfo).openid;
@@ -95,7 +95,7 @@ $(document).ready(function() {
 					setTimeout(function() {
 				    	window.location.href = '../account/account.html';
 					}, 300);
-	    		};
+	    		}
 	    	}
 	    });
     }

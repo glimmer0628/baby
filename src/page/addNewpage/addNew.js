@@ -79,7 +79,7 @@ $("").ready(function() {
 					setTimeout(function() {
 				    	window.history.back();
 					}, 300);
-	    		};
+	    		}
 	    	}
 	    });
 			

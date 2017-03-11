@@ -5,14 +5,17 @@ $("").ready(function() {
 	$(".my_name").html(userInfo.nickname);
 
     $.ajax({
-            url:"money.json",
-            type:"get",
+            url:'http://' + ip + '/tuina/api.php?s=/order/weichart/getUserBrokerage',
+            type:"post",
             dataType:"json",
+            data:{
+            	id:JSON.parse(sessionStorage.userInfo).openid
+            },
             success: function(data) {
             	
                 console.log(data);
-           		$(".money1").html(data.heji);
-           		$(".money2").html(data.tixian);
+           		$(".money1").html(data.total_brokerage);
+           		$(".money2").html(data.brokerage);
             },
             error: function() {
      		alert('失败');
